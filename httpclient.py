@@ -104,7 +104,6 @@ class HTTPClient(object):
         host,port,path = self.get_host_port(url)
         self.connect(host, port)
         agent =  "User-Agent: curl/7.64.1\r\n"
-        content_type="Content-Type: application/x-www-form-urlencoded\r\n"
         status_code = "POST {} HTTP/1.1\r\n".format(path)
         host_n = "Host: {}\r\n".format(host)
         connection = "Connection: close\r\n\r\n"
